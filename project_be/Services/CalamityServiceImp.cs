@@ -68,7 +68,7 @@ namespace project_be.Services
             }
         }
 
-        public bool UpdateCalamity(int id, string name, string description, string location, DateTime dateStart, DateTime dateEnd, int numberOfFilming)
+        public bool UpdateCalamity(int id, string name, string description, string location, int numberOfFilming)
         {
             try
             {
@@ -89,14 +89,7 @@ namespace project_be.Services
                 {
                     calamity.FilmingLocation = location;
                 }
-                if (!dateStart.ToString().IsEmpty())
-                {
-                    calamity.TimeStart = dateStart;
-                }
-                if (!dateEnd.ToString().IsEmpty())
-                {
-                    calamity.TimeEnd = dateEnd;
-                }
+                
                 if (!numberOfFilming.ToString().IsEmpty())
                 {
                     calamity.NumberOfFilming = numberOfFilming;

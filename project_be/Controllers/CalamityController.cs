@@ -31,9 +31,9 @@ namespace project_be.Controllers
         }
 
         [HttpPut]
-        public bool UpdateCalamity(int id, string name, string description, string location, DateTime dateStart, DateTime dateEnd, int numberOfFilming)
+        public bool UpdateCalamity(int id, string name, string description, string location,  int numberOfFilming)
         {
-            return service.UpdateCalamity(id, name, description, location, dateStart, dateEnd, numberOfFilming);
+            return service.UpdateCalamity(id, name, description, location,  numberOfFilming);
         }
 
         [HttpDelete]

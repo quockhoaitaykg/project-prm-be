@@ -11,7 +11,7 @@ namespace project_be.Services
     {
         bool InsertCalamity(string name, string description, string location, DateTime dateStart, DateTime dateEnd, int numberOfFilming);
 
-        bool UpdateCalamity(int id, string name, string description, string location, DateTime dateStart, DateTime dateEnd, int numberOfFilming);
+        bool UpdateCalamity(int id, string name, string description, string location, int numberOfFilming);
 
         bool DeleteCalamity(int id);
 
