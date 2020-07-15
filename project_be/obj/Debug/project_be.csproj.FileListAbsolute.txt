@@ -176,3 +176,4 @@ D:\Study\Project_PRM\git_project\project-prm-be\project_be\obj\Debug\project_be.
 D:\Study\Project_PRM\git_project\project-prm-be\project_be\obj\Debug\project_be.csproj.CopyComplete
 D:\Study\Project_PRM\git_project\project-prm-be\project_be\obj\Debug\project_be.dll
 D:\Study\Project_PRM\git_project\project-prm-be\project_be\obj\Debug\project_be.pdb
+D:\Study\Project_PRM\git_project\project-prm-be\project_be\bin\System.Linq.Dynamic.dll

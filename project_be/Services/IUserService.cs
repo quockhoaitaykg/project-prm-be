@@ -10,6 +10,6 @@ namespace project_be.Services
 {
     interface IUserService
     {
-        User CheckLoginAdmin(String email, String password);
+        String CheckLoginAdmin(String email, String password);
     }
 }

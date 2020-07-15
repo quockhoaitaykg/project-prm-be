@@ -19,7 +19,7 @@ namespace project_be.Controllers
         }
 
         [HttpGet]
-        public User CheckLoginAdmin(String email, String password)
+        public String CheckLoginAdmin(String email, String password)
         {
             return service.CheckLoginAdmin(email, password);
         }
