@@ -9,5 +9,7 @@ namespace project_be.Services
     interface IActorService
     {
         bool InsertActor(string name, string image, string description, string phone, string email, int insId);
+
+        bool UpdateActor(int id, string name, string image, string description, string phone, string email, int updId);
     }
 }

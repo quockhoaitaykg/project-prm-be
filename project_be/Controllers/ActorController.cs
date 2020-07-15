@@ -21,5 +21,11 @@ namespace project_be.Controllers
         {
             return service.InsertActor(name, image, description, phone, email, insId);
         }
+
+        [HttpPut]
+        public bool UpdatetActor(int id, string name, string image, string description, string phone, string email, int updId)
+        {
+            return service.UpdateActor(id, name, image, description, phone, email, updId);
+        }
     }
 }

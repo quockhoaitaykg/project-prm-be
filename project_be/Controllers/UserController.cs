@@ -18,7 +18,7 @@ namespace project_be.Controllers
             service = new UserServiceImp();
         }
 
-        [HttpGet]
+        [HttpPost]
         public String CheckLoginAdmin(String email, String password)
         {
             return service.CheckLoginAdmin(email, password);
