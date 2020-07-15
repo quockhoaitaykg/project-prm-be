@@ -164,9 +164,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>DataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Tool.cs">
       <DependentUpon>DataModel.tt</DependentUpon>
     </Compile>
@@ -182,8 +179,8 @@
     <Content Include="Global.asax" />
     <Content Include="Models\DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
       <DependentUpon>DataModel.edmx</DependentUpon>
+      <LastGenOutput>DataModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\DataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
