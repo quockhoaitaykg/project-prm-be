@@ -18,9 +18,10 @@ namespace project_be.Services
             this.db = new projectEntities();
         }
 
+
         public List<Actor> GetAllActor()
         {
-            return db.Actors.ToList();
+            return db.Actors.Where(x => x.DelFlg == false).ToList();
         }
 
         [HttpPost]
@@ -87,6 +88,18 @@ namespace project_be.Services
             {
                 return false;
             }
+        }
+        public bool DeleteActor(int id)
+        {
+            Actor actor = db.Actors.FirstOrDefault(x => x.Id == id);
+            if(actor == null)
+            {
+                return false;
+            }
+            actor.DelFlg = true;
+            db.Actors.AddOrUpdate(actor);
+            db.SaveChanges();
+            return true;
         }
     }
 }

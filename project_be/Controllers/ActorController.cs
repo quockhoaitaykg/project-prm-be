@@ -34,5 +34,11 @@ namespace project_be.Controllers
         {
             return service.GetAllActor();
         }
+
+        [HttpDelete]
+        public bool DeleteActor(int id)
+        {
+            return service.DeleteActor(id);
+        }
     }
 }

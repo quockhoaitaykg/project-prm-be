@@ -13,6 +13,8 @@ namespace project_be.Services
 
         bool UpdateActor(int id, string name, string image, string description, string phone, string email, int updId);
 
+        bool DeleteActor(int id);
+
         List<Actor> GetAllActor();
     }
 }
