@@ -26,5 +26,24 @@ namespace project_be.Services
             return "error";
            
         }
+
+        public bool InsertAdmin(string email, string password)
+        {
+            try
+            {
+                User user = new User();
+                user.Email = email;
+                user.Password = password;
+                user.Role = "Admin";
+                user.DelFlg = false;
+                db.Users.Add(user);
+                db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

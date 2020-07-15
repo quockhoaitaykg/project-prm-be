@@ -11,5 +11,7 @@ namespace project_be.Services
     interface IUserService
     {
         String CheckLoginAdmin(String email, String password);
+
+        bool InsertAdmin(string email, string password);
     }
 }

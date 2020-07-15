@@ -19,9 +19,15 @@ namespace project_be.Controllers
         }
 
         [HttpPost]
-        public String CheckLoginAdmin(String email, String password)
+        public String CheckLoginAdmin(string email, string password)
         {
             return service.CheckLoginAdmin(email, password);
+        }
+
+        [HttpPost]
+        public bool InsertAdmin(string email, string password)
+        {
+            return service.InsertAdmin(email, password);
         }
 
     }
