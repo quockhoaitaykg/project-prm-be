@@ -17,6 +17,12 @@ namespace project_be.Services
         {
             this.db = new projectEntities();
         }
+
+        public List<Actor> GetAllActor()
+        {
+            return db.Actors.ToList();
+        }
+
         [HttpPost]
         public bool InsertActor(string name, string image, string description, string phone, string email, int insId)
         {

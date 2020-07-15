@@ -1,4 +1,5 @@
-﻿using project_be.Services;
+﻿using project_be.Models;
+using project_be.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,12 @@ namespace project_be.Controllers
         public bool UpdatetActor(int id, string name, string image, string description, string phone, string email, int updId)
         {
             return service.UpdateActor(id, name, image, description, phone, email, updId);
+        }
+
+        [HttpGet]
+        public List<Actor> GetAllActor()
+        {
+            return service.GetAllActor();
         }
     }
 }
