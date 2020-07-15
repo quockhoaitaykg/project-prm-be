@@ -18,8 +18,12 @@ namespace project_be.Services
         }
         public String CheckLoginAdmin(string email, string password)
         {
-            String user = db.Users.Where(x => x.Email == email && x.Password == password).Select(x => x.Role).SingleOrDefault();    
-            return user;
+            String user = db.Users.Where(x => x.Email == email && x.Password == password).Select(x => x.Role).SingleOrDefault();
+            if (user != null)
+            {
+                return user;
+            }
+            return "error";
            
         }
     }
