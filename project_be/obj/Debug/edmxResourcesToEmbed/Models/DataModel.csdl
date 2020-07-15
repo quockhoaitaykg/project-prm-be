@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Actor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DelFlg" Type="Boolean" Nullable="false" />
+    <Property Name="InsId" Type="Int32" Nullable="false" />
+    <Property Name="InsTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdId" Type="Int32" />
+    <Property Name="UpdTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CalamityActors" Relationship="Self.FK__CalamityA__Actor__33D4B598" FromRole="Actor" ToRole="CalamityActor" />
+  </EntityType>
+  <EntityType Name="Calamity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FilmingLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TimeStart" Type="DateTime" Precision="3" />
+    <Property Name="TimeEnd" Type="DateTime" Precision="3" />
+    <Property Name="NumberOfFilming" Type="Int32" />
+    <Property Name="DelFlg" Type="Boolean" Nullable="false" />
+    <Property Name="InsId" Type="Int32" />
+    <Property Name="InsTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdId" Type="Int32" />
+    <Property Name="UpdTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CalamityActors" Relationship="Self.FK__CalamityA__Calam__32E0915F" FromRole="Calamity" ToRole="CalamityActor" />
+    <NavigationProperty Name="CalamityTools" Relationship="Self.FK__CalamityT__Calam__2E1BDC42" FromRole="Calamity" ToRole="CalamityTool" />
+  </EntityType>
+  <EntityType Name="CalamityActor">
+    <Key>
+      <PropertyRef Name="CalamityId" />
+      <PropertyRef Name="ActorId" />
+      <PropertyRef Name="Role" />
+    </Key>
+    <Property Name="CalamityId" Type="Int32" Nullable="false" />
+    <Property Name="ActorId" Type="Int32" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Version" Type="Int32" />
+    <Property Name="DelFlg" Type="Boolean" Nullable="false" />
+    <Property Name="InsId" Type="Int32" Nullable="false" />
+    <Property Name="InsTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdId" Type="Int32" />
+    <Property Name="UpdTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Actor" Relationship="Self.FK__CalamityA__Actor__33D4B598" FromRole="CalamityActor" ToRole="Actor" />
+    <NavigationProperty Name="Calamity" Relationship="Self.FK__CalamityA__Calam__32E0915F" FromRole="CalamityActor" ToRole="Calamity" />
+  </EntityType>
+  <EntityType Name="CalamityTool">
+    <Key>
+      <PropertyRef Name="CalamityId" />
+      <PropertyRef Name="ToolId" />
+    </Key>
+    <Property Name="CalamityId" Type="Int32" Nullable="false" />
+    <Property Name="ToolId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Version" Type="Int32" />
+    <Property Name="DelFlg" Type="Boolean" Nullable="false" />
+    <Property Name="InsId" Type="Int32" />
+    <Property Name="InsTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdId" Type="Int32" />
+    <Property Name="UpdTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Calamity" Relationship="Self.FK__CalamityT__Calam__2E1BDC42" FromRole="CalamityTool" ToRole="Calamity" />
+    <NavigationProperty Name="Tool" Relationship="Self.FK__CalamityT__ToolI__2F10007B" FromRole="CalamityTool" ToRole="Tool" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tool">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="DelFlg" Type="Boolean" Nullable="false" />
+    <Property Name="InsId" Type="Int32" Nullable="false" />
+    <Property Name="InsTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdId" Type="Int32" />
+    <Property Name="UpdTime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CalamityTools" Relationship="Self.FK__CalamityT__ToolI__2F10007B" FromRole="Tool" ToRole="CalamityTool" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DelFlg" Type="Boolean" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__CalamityA__Actor__33D4B598">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="1" />
+    <End Role="CalamityActor" Type="Self.CalamityActor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CalamityActor">
+        <PropertyRef Name="ActorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CalamityA__Calam__32E0915F">
+    <End Role="Calamity" Type="Self.Calamity" Multiplicity="1" />
+    <End Role="CalamityActor" Type="Self.CalamityActor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Calamity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CalamityActor">
+        <PropertyRef Name="CalamityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CalamityT__Calam__2E1BDC42">
+    <End Role="Calamity" Type="Self.Calamity" Multiplicity="1" />
+    <End Role="CalamityTool" Type="Self.CalamityTool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Calamity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CalamityTool">
+        <PropertyRef Name="CalamityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CalamityT__ToolI__2F10007B">
+    <End Role="Tool" Type="Self.Tool" Multiplicity="1" />
+    <End Role="CalamityTool" Type="Self.CalamityTool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tool">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CalamityTool">
+        <PropertyRef Name="ToolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="projectEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Actors" EntityType="Self.Actor" />
+    <EntitySet Name="Calamities" EntityType="Self.Calamity" />
+    <EntitySet Name="CalamityActors" EntityType="Self.CalamityActor" />
+    <EntitySet Name="CalamityTools" EntityType="Self.CalamityTool" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Tools" EntityType="Self.Tool" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__CalamityA__Actor__33D4B598" Association="Self.FK__CalamityA__Actor__33D4B598">
+      <End Role="Actor" EntitySet="Actors" />
+      <End Role="CalamityActor" EntitySet="CalamityActors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CalamityA__Calam__32E0915F" Association="Self.FK__CalamityA__Calam__32E0915F">
+      <End Role="Calamity" EntitySet="Calamities" />
+      <End Role="CalamityActor" EntitySet="CalamityActors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CalamityT__Calam__2E1BDC42" Association="Self.FK__CalamityT__Calam__2E1BDC42">
+      <End Role="Calamity" EntitySet="Calamities" />
+      <End Role="CalamityTool" EntitySet="CalamityTools" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CalamityT__ToolI__2F10007B" Association="Self.FK__CalamityT__ToolI__2F10007B">
+      <End Role="Tool" EntitySet="Tools" />
+      <End Role="CalamityTool" EntitySet="CalamityTools" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

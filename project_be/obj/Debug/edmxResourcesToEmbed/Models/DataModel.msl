@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="projectModelStoreContainer" CdmEntityContainer="projectEntities">
+    <EntitySetMapping Name="Actors">
+      <EntityTypeMapping TypeName="projectModel.Actor">
+        <MappingFragment StoreEntitySet="Actor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="InsId" ColumnName="InsId" />
+          <ScalarProperty Name="InsTime" ColumnName="InsTime" />
+          <ScalarProperty Name="UpdId" ColumnName="UpdId" />
+          <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calamities">
+      <EntityTypeMapping TypeName="projectModel.Calamity">
+        <MappingFragment StoreEntitySet="Calamity">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FilmingLocation" ColumnName="FilmingLocation" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="NumberOfFilming" ColumnName="NumberOfFilming" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="InsId" ColumnName="InsId" />
+          <ScalarProperty Name="InsTime" ColumnName="InsTime" />
+          <ScalarProperty Name="UpdId" ColumnName="UpdId" />
+          <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalamityActors">
+      <EntityTypeMapping TypeName="projectModel.CalamityActor">
+        <MappingFragment StoreEntitySet="CalamityActor">
+          <ScalarProperty Name="CalamityId" ColumnName="CalamityId" />
+          <ScalarProperty Name="ActorId" ColumnName="ActorId" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="RoleDescription" ColumnName="RoleDescription" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="InsId" ColumnName="InsId" />
+          <ScalarProperty Name="InsTime" ColumnName="InsTime" />
+          <ScalarProperty Name="UpdId" ColumnName="UpdId" />
+          <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CalamityTools">
+      <EntityTypeMapping TypeName="projectModel.CalamityTool">
+        <MappingFragment StoreEntitySet="CalamityTool">
+          <ScalarProperty Name="CalamityId" ColumnName="CalamityId" />
+          <ScalarProperty Name="ToolId" ColumnName="ToolId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="InsId" ColumnName="InsId" />
+          <ScalarProperty Name="InsTime" ColumnName="InsTime" />
+          <ScalarProperty Name="UpdId" ColumnName="UpdId" />
+          <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="projectModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tools">
+      <EntityTypeMapping TypeName="projectModel.Tool">
+        <MappingFragment StoreEntitySet="Tool">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="InsId" ColumnName="InsId" />
+          <ScalarProperty Name="InsTime" ColumnName="InsTime" />
+          <ScalarProperty Name="UpdId" ColumnName="UpdId" />
+          <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="projectModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
