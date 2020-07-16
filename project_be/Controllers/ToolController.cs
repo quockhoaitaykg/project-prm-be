@@ -33,5 +33,10 @@ namespace project_be.Controllers
         {
             return service.DeleteTool(id);
         }
+
+        public bool UpdateTool(int id, string name, string image, string description, int quantity, string status)
+        {
+            return service.UpdateTool(id, name, image, description, quantity, status);
+        }
     }
 }

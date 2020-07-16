@@ -5,6 +5,7 @@ using System.Data.Entity.Migrations;
 using System.Drawing.Design;
 using System.Linq;
 using System.Web;
+using System.Web.WebPages;
 
 namespace project_be.Services
 {
@@ -69,7 +70,45 @@ namespace project_be.Services
 
         public bool UpdateTool(int id, string name, string image, string description, int quantity, string status)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Tool tool = db.Tools.FirstOrDefault(x => x.Id == id);
+                if (tool == null)
+                {
+                    return false;
+                }
+                if (!name.IsEmpty())
+                {
+                    tool.Name = name;
+                }
+                if (!image.IsEmpty())
+                {
+                    tool.Image = image;
+                }
+                if (!description.IsEmpty())
+                {
+                    tool.Description = description;
+                }
+                if (!quantity.ToString().IsEmpty())
+                {
+                    tool.Quantity = quantity;
+                }
+                if (!status.IsEmpty())
+                {
+                    tool.Status = status;
+                }
+
+                tool.UpdId = 1;
+                tool.UpdTime = DateTime.Now;
+                db.Tools.AddOrUpdate(tool);
+                db.SaveChanges();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
