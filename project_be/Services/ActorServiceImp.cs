@@ -77,6 +77,10 @@ namespace project_be.Services
                 {
                     actor.Phone = phone;
                 }
+                if (!email.IsEmpty())
+                {
+                    actor.Email = email;
+                }
                 actor.UpdId = updId;
                 actor.UpdTime = DateTime.Now;
                 db.Actors.AddOrUpdate(actor);
