@@ -12,18 +12,12 @@ namespace project_be.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CalamityTool
+    public partial class sysdiagram
     {
-        public int CalamityId { get; set; }
-        public int ToolId { get; set; }
-        public int Quantity { get; set; }
-        public bool DelFlg { get; set; }
-        public Nullable<int> InsId { get; set; }
-        public System.DateTime InsTime { get; set; }
-        public Nullable<int> UpdId { get; set; }
-        public Nullable<System.DateTime> UpdTime { get; set; }
-    
-        public virtual Calamity Calamity { get; set; }
-        public virtual Tool Tool { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

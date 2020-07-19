@@ -18,7 +18,6 @@ namespace project_be.Models
         public int ActorId { get; set; }
         public string Role { get; set; }
         public string RoleDescription { get; set; }
-        public Nullable<int> Version { get; set; }
         public bool DelFlg { get; set; }
         public int InsId { get; set; }
         public System.DateTime InsTime { get; set; }

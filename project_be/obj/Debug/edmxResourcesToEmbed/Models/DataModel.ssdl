@@ -37,13 +37,11 @@
     <Key>
       <PropertyRef Name="CalamityId" />
       <PropertyRef Name="ActorId" />
-      <PropertyRef Name="Role" />
     </Key>
     <Property Name="CalamityId" Type="int" Nullable="false" />
     <Property Name="ActorId" Type="int" Nullable="false" />
     <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="RoleDescription" Type="text" Nullable="false" />
-    <Property Name="Version" Type="int" />
     <Property Name="DelFlg" Type="bit" Nullable="false" />
     <Property Name="InsId" Type="int" Nullable="false" />
     <Property Name="InsTime" Type="datetime" Nullable="false" />
@@ -58,12 +56,21 @@
     <Property Name="CalamityId" Type="int" Nullable="false" />
     <Property Name="ToolId" Type="int" Nullable="false" />
     <Property Name="Quantity" Type="int" Nullable="false" />
-    <Property Name="Version" Type="int" />
     <Property Name="DelFlg" Type="bit" Nullable="false" />
     <Property Name="InsId" Type="int" />
     <Property Name="InsTime" Type="datetime" Nullable="false" />
     <Property Name="UpdId" Type="int" />
     <Property Name="UpdTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Tool">
     <Key>
@@ -74,7 +81,7 @@
     <Property Name="Image" Type="text" />
     <Property Name="Description" Type="text" />
     <Property Name="Quantity" Type="int" />
-    <Property Name="Status" Type="varchar" MaxLength="1" />
+    <Property Name="Status" Type="bit" />
     <Property Name="DelFlg" Type="bit" Nullable="false" />
     <Property Name="InsId" Type="int" Nullable="false" />
     <Property Name="InsTime" Type="datetime" Nullable="false" />
@@ -144,6 +151,7 @@
     <EntitySet Name="Calamity" EntityType="Self.Calamity" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CalamityActor" EntityType="Self.CalamityActor" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CalamityTool" EntityType="Self.CalamityTool" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Tool" EntityType="Self.Tool" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__CalamityA__Actor__5812160E" Association="Self.FK__CalamityA__Actor__5812160E">

@@ -43,7 +43,7 @@ namespace project_be.Services
             return db.Tools.Where(x => x.DelFlg == false).ToList();
         }
 
-        public bool InsertTool(string name, string image, string description, int quantity, string status)
+        public bool InsertTool(string name, string image, string description, int quantity, bool status)
         {
             try
             {
@@ -68,7 +68,7 @@ namespace project_be.Services
             }
         }
 
-        public bool UpdateTool(int id, string name, string image, string description, int quantity, string status)
+        public bool UpdateTool(int id, string name, string image, string description, int quantity, bool status)
         {
             try
             {
@@ -93,10 +93,9 @@ namespace project_be.Services
                 {
                     tool.Quantity = quantity;
                 }
-                if (!status.IsEmpty())
-                {
+               
                     tool.Status = status;
-                }
+                
 
                 tool.UpdId = 1;
                 tool.UpdTime = DateTime.Now;

@@ -9,9 +9,9 @@ namespace project_be.Services
 {
     interface IToolService
     {
-        bool InsertTool(string name, string image, string description, int quantity, string status);
+        bool InsertTool(string name, string image, string description, int quantity, bool status);
 
-        bool UpdateTool(int id, string name, string image, string description, int quantity, string status);
+        bool UpdateTool(int id, string name, string image, string description, int quantity, bool status);
 
         bool DeleteTool(int id);
 

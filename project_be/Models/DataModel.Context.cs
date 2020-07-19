@@ -29,6 +29,7 @@ namespace project_be.Models
         public virtual DbSet<Calamity> Calamities { get; set; }
         public virtual DbSet<CalamityActor> CalamityActors { get; set; }
         public virtual DbSet<CalamityTool> CalamityTools { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<Tool> Tools { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

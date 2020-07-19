@@ -25,7 +25,7 @@ namespace project_be.Models
         public string Image { get; set; }
         public string Description { get; set; }
         public Nullable<int> Quantity { get; set; }
-        public string Status { get; set; }
+        public Nullable<bool> Status { get; set; }
         public bool DelFlg { get; set; }
         public int InsId { get; set; }
         public System.DateTime InsTime { get; set; }

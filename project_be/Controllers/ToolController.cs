@@ -24,7 +24,7 @@ namespace project_be.Controllers
             return service.GetAllTool();
         }
         [HttpPost]
-        public bool InsertTool(string name, string image, string description, int quantity, string status)
+        public bool InsertTool(string name, string image, string description, int quantity, bool status)
         {
             return service.InsertTool(name, image, description, quantity, status);
         }
@@ -34,7 +34,7 @@ namespace project_be.Controllers
             return service.DeleteTool(id);
         }
         [HttpPut]
-        public bool UpdateTool(int id, string name, string image, string description, int quantity, string status)
+        public bool UpdateTool(int id, string name, string image, string description, int quantity, bool status)
         {
             return service.UpdateTool(id, name, image, description, quantity, status);
         }

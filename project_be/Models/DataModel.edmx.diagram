@@ -4,13 +4,14 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d566c3d637c34cfdb4ff7d2fb419a844" Name="Diagram1">
-        <EntityTypeShape EntityType="projectModel.Actor" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="projectModel.Calamity" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="projectModel.CalamityActor" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="projectModel.CalamityTool" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="projectModel.Tool" Width="1.5" PointX="3.75" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="projectModel.User" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+      <Diagram DiagramId="bda8f58d43fc4c6a8553bf27c45a9803" Name="Diagram1">
+        <EntityTypeShape EntityType="projectModel.Actor" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectModel.Calamity" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectModel.CalamityActor" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectModel.CalamityTool" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectModel.sysdiagram" Width="1.5" PointX="2.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectModel.Tool" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectModel.User" Width="1.5" PointX="4.75" PointY="9.625" IsExpanded="true" />
         <AssociationConnector Association="projectModel.FK__CalamityA__Actor__5812160E" ManuallyRouted="false" />
         <AssociationConnector Association="projectModel.FK__CalamityA__Calam__571DF1D5" ManuallyRouted="false" />
         <AssociationConnector Association="projectModel.FK__CalamityT__Calam__59063A47" ManuallyRouted="false" />
