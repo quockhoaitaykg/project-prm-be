@@ -93,10 +93,12 @@ namespace project_be.Services
                 {
                     tool.Quantity = quantity;
                 }
-               
+                if (!tool.ToString().IsEmpty())
+                {
                     tool.Status = status;
-                
-
+                }
+                   
+               
                 tool.UpdId = 1;
                 tool.UpdTime = DateTime.Now;
                 db.Tools.AddOrUpdate(tool);
