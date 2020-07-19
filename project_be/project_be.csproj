@@ -138,6 +138,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActorController.cs" />
     <Compile Include="Controllers\CalamityController.cs" />
+    <Compile Include="Controllers\MovieActorController.cs" />
     <Compile Include="Controllers\ToolController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -184,8 +185,10 @@
     <Compile Include="Services\CalamityServiceImp.cs" />
     <Compile Include="Services\IActorService.cs" />
     <Compile Include="Services\ICalamityService.cs" />
+    <Compile Include="Services\IMovieActorService.cs" />
     <Compile Include="Services\IUserService.cs" />
     <Compile Include="Services\IToolService.cs" />
+    <Compile Include="Services\MovieActorServiceImp.cs" />
     <Compile Include="Services\ToolServiceImp.cs" />
     <Compile Include="Services\UserServiceImp.cs" />
   </ItemGroup>
