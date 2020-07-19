@@ -52,6 +52,7 @@
           <Property Name="InsTime" Type="datetime" Nullable="false" />
           <Property Name="UpdId" Type="int" />
           <Property Name="UpdTime" Type="datetime" />
+          <Property Name="CalamityDescription" Type="text" />
         </EntityType>
         <EntityType Name="CalamityTool">
           <Key>
@@ -66,6 +67,8 @@
           <Property Name="InsTime" Type="datetime" Nullable="false" />
           <Property Name="UpdId" Type="int" />
           <Property Name="UpdTime" Type="datetime" />
+          <Property Name="ToolDescription" Type="text" />
+          <Property Name="CalamityDescription" Type="text" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -231,6 +234,7 @@
           <Property Name="InsTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UpdId" Type="Int32" />
           <Property Name="UpdTime" Type="DateTime" Precision="3" />
+          <Property Name="CalamityDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Actor" Relationship="Self.FK__CalamityA__Actor__5812160E" FromRole="CalamityActor" ToRole="Actor" />
           <NavigationProperty Name="Calamity" Relationship="Self.FK__CalamityA__Calam__571DF1D5" FromRole="CalamityActor" ToRole="Calamity" />
         </EntityType>
@@ -247,6 +251,8 @@
           <Property Name="InsTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="UpdId" Type="Int32" />
           <Property Name="UpdTime" Type="DateTime" Precision="3" />
+          <Property Name="ToolDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CalamityDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Calamity" Relationship="Self.FK__CalamityT__Calam__59063A47" FromRole="CalamityTool" ToRole="Calamity" />
           <NavigationProperty Name="Tool" Relationship="Self.FK__CalamityT__ToolI__59FA5E80" FromRole="CalamityTool" ToRole="Tool" />
         </EntityType>
@@ -413,6 +419,7 @@
                 <ScalarProperty Name="InsTime" ColumnName="InsTime" />
                 <ScalarProperty Name="UpdId" ColumnName="UpdId" />
                 <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+                <ScalarProperty Name="CalamityDescription" ColumnName="CalamityDescription" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -427,6 +434,8 @@
                 <ScalarProperty Name="InsTime" ColumnName="InsTime" />
                 <ScalarProperty Name="UpdId" ColumnName="UpdId" />
                 <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+                <ScalarProperty Name="ToolDescription" ColumnName="ToolDescription" />
+                <ScalarProperty Name="CalamityDescription" ColumnName="CalamityDescription" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

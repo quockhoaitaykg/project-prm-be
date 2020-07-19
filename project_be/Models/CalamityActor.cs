@@ -23,6 +23,7 @@ namespace project_be.Models
         public System.DateTime InsTime { get; set; }
         public Nullable<int> UpdId { get; set; }
         public Nullable<System.DateTime> UpdTime { get; set; }
+        public string CalamityDescription { get; set; }
     
         public virtual Actor Actor { get; set; }
         public virtual Calamity Calamity { get; set; }

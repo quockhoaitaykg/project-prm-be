@@ -48,6 +48,7 @@
           <ScalarProperty Name="InsTime" ColumnName="InsTime" />
           <ScalarProperty Name="UpdId" ColumnName="UpdId" />
           <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+          <ScalarProperty Name="CalamityDescription" ColumnName="CalamityDescription" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -62,6 +63,8 @@
           <ScalarProperty Name="InsTime" ColumnName="InsTime" />
           <ScalarProperty Name="UpdId" ColumnName="UpdId" />
           <ScalarProperty Name="UpdTime" ColumnName="UpdTime" />
+          <ScalarProperty Name="ToolDescription" ColumnName="ToolDescription" />
+          <ScalarProperty Name="CalamityDescription" ColumnName="CalamityDescription" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

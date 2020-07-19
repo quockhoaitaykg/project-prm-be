@@ -19,9 +19,9 @@ namespace project_be.Controllers
         }
 
         [HttpPost]
-        public bool InsertActorMovie(int calId, int actorId, string role, string description)
+        public bool InsertActorMovie(int calId, int actorId, string role)
         {
-            return service.InsertActorMovie(calId, actorId, role, description);
+            return service.InsertActorMovie(calId, actorId, role);
         }
 
         [HttpGet]

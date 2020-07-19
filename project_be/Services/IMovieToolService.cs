@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace project_be.Services
 {
-    interface IMovieActorService
+    interface IMovieToolService
     {
-        bool InsertActorMovie(int calId, int actorId, string role);
-        List<CalamityActor> GetAll();
+        bool InsertMovieTool(int calId, int toolId, int quantity);
+
+        List<CalamityTool> GetAllTool();
     }
 }

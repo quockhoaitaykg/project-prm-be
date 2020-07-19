@@ -20,15 +20,22 @@ namespace project_be.Services
             return db.CalamityActors.ToList();
         }
 
-        public bool InsertActorMovie(int calId, int actorId, string role, string description)
+        public bool InsertActorMovie(int calId, int actorId, string role)
         {
             try
             {
                 CalamityActor calamityActor = new CalamityActor();
+                Actor actor = db.Actors.FirstOrDefault(x => x.Id == actorId);
+                String actorName = actor.Name;
+                Calamity calamity = db.Calamities.FirstOrDefault(x => x.Id == calId);
+                String calName = calamity.Name;
+
+
                 calamityActor.CalamityId = calId;
                 calamityActor.ActorId = actorId;
                 calamityActor.Role = role;
-                calamityActor.RoleDescription = description;
+                calamityActor.RoleDescription = actorName;
+                calamityActor.CalamityDescription = calName;
                 calamityActor.DelFlg = false;
                 calamityActor.InsId = 1;
                 calamityActor.InsTime = DateTime.Now;
