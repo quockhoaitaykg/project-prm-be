@@ -39,9 +39,6 @@ namespace project_be.Services
                 if (toolQuantity >= quantity)
                 {
                     calamityTool.Quantity = quantity;
-                }else if (afterQuantity == 0)
-                {
-                    tool.Status = false;
                 }
                 else
                 {
