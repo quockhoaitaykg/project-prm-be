@@ -41,6 +41,13 @@ namespace project_be.Controllers
         {
             return service.DeleteCalamity(id);
         }
+
+        [HttpGet]
+
+        public Calamity GetCalamityById(int id)
+        {
+            return service.GetCalamityById(id);
+        }
         
     }
 }

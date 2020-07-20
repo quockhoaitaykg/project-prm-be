@@ -42,6 +42,11 @@ namespace project_be.Services
             return db.Calamities.Where(x => x.DelFlg == false).ToList();
         }
 
+        public Calamity GetCalamityById(int id)
+        {
+            return db.Calamities.FirstOrDefault(x => x.Id == id);
+        }
+
         public bool InsertCalamity(string name, string description, string location, DateTime dateStart, DateTime dateEnd, int numberOfFilming)
         {
             try

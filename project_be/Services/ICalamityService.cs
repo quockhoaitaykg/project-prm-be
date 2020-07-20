@@ -16,5 +16,7 @@ namespace project_be.Services
         bool DeleteCalamity(int id);
 
         List<Calamity> GetAllCalamity();
+
+        Calamity GetCalamityById(int id);
     }
 }
