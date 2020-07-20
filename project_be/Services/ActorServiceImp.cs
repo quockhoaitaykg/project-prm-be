@@ -57,6 +57,7 @@ namespace project_be.Services
             try
             {
                 Actor actor = db.Actors.FirstOrDefault(x => x.Id == id);
+                CalamityActor calamityActor = db.CalamityActors.FirstOrDefault(x => x.ActorId == id);
                 if (actor == null)
                 {
                     return false;
@@ -64,6 +65,7 @@ namespace project_be.Services
                 if (!name.IsEmpty())
                 {
                     actor.Name = name;
+                    calamityActor.RoleDescription = name;
                 } 
                 if (!image.IsEmpty())
                 {
@@ -81,8 +83,10 @@ namespace project_be.Services
                 {
                     actor.Email = email;
                 }
+                
                 actor.UpdId = updId;
                 actor.UpdTime = DateTime.Now;
+                db.CalamityActors.AddOrUpdate(calamityActor);
                 db.Actors.AddOrUpdate(actor);
                 db.SaveChanges();
 

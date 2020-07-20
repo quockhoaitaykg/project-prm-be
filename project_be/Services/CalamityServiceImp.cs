@@ -73,6 +73,8 @@ namespace project_be.Services
             try
             {
                 Calamity calamity = db.Calamities.FirstOrDefault(x => x.Id == id);
+                CalamityActor calamityActor = db.CalamityActors.FirstOrDefault(x => x.CalamityId == id);
+                CalamityTool calamityTool = db.CalamityTools.FirstOrDefault(x => x.CalamityId == id);
                 if (calamity == null)
                 {
                     return false;
@@ -80,6 +82,8 @@ namespace project_be.Services
                 if (!name.IsEmpty())
                 {
                     calamity.Name = name;
+                    calamityActor.CalamityDescription = name;
+                    calamityTool.CalamityDescription = name;
                 }
                 if (!description.IsEmpty())
                 {
@@ -97,6 +101,8 @@ namespace project_be.Services
                 calamity.UpdTime = DateTime.Now;
                 calamity.UpdId = 1;
                 db.Calamities.AddOrUpdate(calamity);
+                db.CalamityActors.AddOrUpdate(calamityActor);
+                db.CalamityTools.AddOrUpdate(calamityTool);
                 db.SaveChanges();
                 return true;
             }

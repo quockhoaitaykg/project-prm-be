@@ -40,7 +40,7 @@ namespace project_be.Services
 
         public List<Tool> GetAllTool()
         {
-            return db.Tools.Where(x => x.DelFlg == false).ToList();
+            return db.Tools.Where(x => x.DelFlg == false && x.Status == true ).ToList();
         }
 
         public bool InsertTool(string name, string image, string description, int quantity, bool status)
@@ -73,6 +73,7 @@ namespace project_be.Services
             try
             {
                 Tool tool = db.Tools.FirstOrDefault(x => x.Id == id);
+                CalamityTool calamityTool = db.CalamityTools.FirstOrDefault(x => x.ToolId == id);
                 if (tool == null)
                 {
                     return false;
@@ -80,6 +81,7 @@ namespace project_be.Services
                 if (!name.IsEmpty())
                 {
                     tool.Name = name;
+                    calamityTool.ToolDescription = name;
                 }
                 if (!image.IsEmpty())
                 {
@@ -102,6 +104,7 @@ namespace project_be.Services
                 tool.UpdId = 1;
                 tool.UpdTime = DateTime.Now;
                 db.Tools.AddOrUpdate(tool);
+                db.CalamityTools.AddOrUpdate(calamityTool);
                 db.SaveChanges();
 
                 return true;

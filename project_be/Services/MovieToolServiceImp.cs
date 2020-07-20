@@ -33,12 +33,15 @@ namespace project_be.Services
                 String toolName = tool.Name;
                 int toolQuantity = (int)tool.Quantity;
                 int afterQuantity = toolQuantity - quantity;
-
+                
                 calamityTool.CalamityId = calId;
                 calamityTool.ToolId = toolId;
                 if (toolQuantity >= quantity)
                 {
                     calamityTool.Quantity = quantity;
+                }else if (afterQuantity == 0)
+                {
+                    tool.Status = false;
                 }
                 else
                 {
